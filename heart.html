@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart with Prajwal's Name</title>
+    <style>
+        /* Center the heart in the viewport */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        /* Create the heart shape */
+        .heart {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transform: rotate(-45deg); /* Rotate square to make heart shape */
+            margin-top: 50px;
+        }
+
+        /* Create the top circles of the heart */
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%; /* Make the circles */
+        }
+
+        /* Position the left circle */
+        .heart:before {
+            top: -100px;
+            left: 0;
+        }
+
+        /* Position the right circle */
+        .heart:after {
+            left: 100px;
+            top: 0;
+        }
+
+        /* Style for the centered name */
+        .name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg); /* Align the text correctly */
+            font-family: 'Arial', sans-serif;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart">
+        <div class="name">Prajwal</div>
+    </div>
+</body>
+</html>
